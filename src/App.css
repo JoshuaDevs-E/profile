@@ -1,0 +1,269 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  transition: all 2s;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.nav {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.li {
+  float: right;
+}
+
+.a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.a:hover {
+  background-color: #508EEE;
+  color: black;
+}
+
+.social-icons a:hover {
+  color: #508EEE;
+}
+
+.h2 {
+  font-size: 40px;
+}
+
+#home {
+  background: none;
+}
+
+#about {
+  margin: auto;
+  font-size: 25px;
+  padding: 30px;
+}
+
+@media (max-width: 600px) {
+  .li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.skills-buttons {
+  text-align: center;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.skills-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.html-button {
+  background-color: #e44d26;
+  color: white;
+}
+
+.css-button {
+  background-color: #264de4;
+  color: white;
+}
+
+.js-button {
+  background-color: #f7df1e;
+  color: black;
+}
+
+.python-button {
+  background-color: #306998;
+  color: white;
+}
+
+.mysql-button {
+  background-color: #00758f;
+  color: white;
+}
+
+.react-button {
+  background-color: #61dafb;
+  color: black;
+}
+
+.git-button {
+  background-color: #f05032;
+  color: white;
+}
+
+.figma-button {
+  background-color: #f24e1e;
+  color: white;
+}
+
+.bootstrap-button {
+  background-color: #563d7c;
+  color: white;
+}
+
+.nodejs-button {
+  background-color: #8cc84b;
+  color: black;
+}
+
+.mongodb-button {
+  background-color: #13aa52;
+  color: white;
+}
+
+.sqlite-button {
+  background-color: #003b57;
+  color: white;
+}
+
+.c-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.c-button:hover {
+  background-color: #4169e1;
+  color: white;
+}
+
+.react-vite-button {
+  background-color: #41b883;
+  color: white;
+}
+
+.react-vite-button:hover {
+  background-color: #34a07c;
+  color: white;
+}
+
+.flask-button {
+  background-color: #000;
+  color: white;
+}
+
+.flask-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-theme {
+  background-color: #fff;
+  transition: all 2s;
+}
+
+.app.dark-theme {
+  background-color: #fff;
+  color: #333;
+  transition: all 2s;
+}
+/* .app.dark-theme .p1{
+  color: #fff;
+  transition: all 2s;
+} */
+.app.dark-theme .container{
+  background-color: #e3e9f0;
+  color: #333;
+  transition: all 1s;
+}
+.app.dark-theme .nav ul{
+  background-color: #e3e9f0;
+  color: #000;
+  transition: all 2s;
+}
+.app.dark-theme .nav ul li a{
+  color: #333;
+}
+
+.logo {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-content {
+  padding: 15px;
+}
+
+.item-content h3 {
+  color: #508EEE;
+}
+
+.item-content p {
+  margin-bottom: 10px;
+}
+
+.item-content a {
+  color: #508EEE;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.item-content a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-item.dark {
+  background-color: #fff;
+  color: #333;
+}
