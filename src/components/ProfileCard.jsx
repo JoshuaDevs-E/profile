@@ -8,7 +8,6 @@ import fondo from '../assets/fomdo.jpg'
 const ProfileCard = ({ name, role, imageUrl, socialLinks, isDarkMode }) => {
   return (
     <div className={`profile-card ${isDarkMode ? 'dark-theme' : ''}`}>
-      <div className="header-background" style={{ backgroundImage: {fondo}, height: '60%', backgroundSize: 'cover', position: 'absolute', width: '100%', top: 0, left: 0, zIndex: -1 }}></div>
       <div className="content">
         <div className="main-content">
           <img className="profile-img" src={imageUrl} alt={`${name}'s Foto`} />
