@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import './ProfileCard.css';
-
+import fondo from '../assets/fomdo.jpg'
 const ProfileCard = ({ name, role, imageUrl, socialLinks, isDarkMode }) => {
   return (
     <div className={`profile-card ${isDarkMode ? 'dark-theme' : ''}`}>
-      <div className="header-background" style={{ backgroundImage: `url('./../public/fomdo.jpg')`, height: '60%', backgroundSize: 'cover', position: 'absolute', width: '100%', top: 0, left: 0, zIndex: -1 }}></div>
+      <div className="header-background" style={{ backgroundImage: {fondo}, height: '60%', backgroundSize: 'cover', position: 'absolute', width: '100%', top: 0, left: 0, zIndex: -1 }}></div>
       <div className="content">
         <div className="main-content">
           <img className="profile-img" src={imageUrl} alt={`${name}'s Foto`} />

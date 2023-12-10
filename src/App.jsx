@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ProfileCard from './components/ProfileCard';
+import foto from './assets/tu-foto.jpg'
 
 function HomeSection({ isDarkMode }) {
   const cardStyle = {
@@ -17,7 +18,7 @@ function HomeSection({ isDarkMode }) {
           </span>
         }
         role="Web developer"
-        imageUrl="../public/tu-foto.jpg"
+        imageUrl={foto}
         socialLinks={[
           { name: 'Instagram', url: 'https://www.instagram.com/joshua.epr/' },
           { name: 'GitHub', url: 'https://github.com/JoshuaDevs-E' },
