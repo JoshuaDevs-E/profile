@@ -104,7 +104,7 @@ function SkillsSection() {
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     document.body.classList.toggle('dark-theme', isDarkMode);
   }, [isDarkMode]);
@@ -112,10 +112,12 @@ function App() {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
-
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div className={`app ${isDarkMode ? 'dark-theme' : ''}`}>
-      <nav className='nav'>
+      <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
         <ul className='ul' style={{ justifyContent: 'flex-end' }}>
           <li className='li'>
             <a className='a' href="#toggle-theme" onClick={toggleDarkMode}>
@@ -131,6 +133,9 @@ function App() {
           <li className='li'><a className='a' href="#about">About Me</a></li>
           <li className='li'><a className='a' href="#home">Home</a></li>
         </ul>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          <i className="fas fa-bars"></i>
+        </button>
       </nav>
       <HomeSection isDarkMode={isDarkMode} />
       <AboutSection />

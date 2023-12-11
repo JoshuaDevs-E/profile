@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import './ProfileCard.css';
-import fondo from '../assets/fomdo.jpg'
 const ProfileCard = ({ name, role, imageUrl, socialLinks, isDarkMode }) => {
   return (
     <div className={`profile-card ${isDarkMode ? 'dark-theme' : ''}`}>
@@ -22,13 +21,11 @@ const ProfileCard = ({ name, role, imageUrl, socialLinks, isDarkMode }) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="social-icon btn btn-primary" // Añade la clase btn btn-primary aquí
+              className="social-icon btn btn-primary"
             >
-              {/* Utiliza FontAwesomeIcon con el icono correspondiente */}
               {link.name === 'Instagram' && <FontAwesomeIcon icon={faInstagram} />}
               {link.name === 'GitHub' && <FontAwesomeIcon icon={faGithub} />}
               {link.name === 'Threads' && <FontAwesomeIcon icon={faComments} />}
-              {/* Agrega más iconos según sea necesario */}
             </a>
           ))}
         </div>

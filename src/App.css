@@ -7,6 +7,8 @@
 body {
   overflow-x: hidden;
   transition: all 2s;
+  background-color: #171717;
+  color: #fff;
 }
 
 .card {
@@ -67,12 +69,56 @@ body {
   font-size: 25px;
   padding: 30px;
 }
+.menu-toggle {
+  display: none; /* Oculta el botón en tamaños mayores a 600px */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+}
 
 @media (max-width: 600px) {
+  .menu-toggle {
+    display: block; /* Muestra el botón en tamaños menores a 600px */
+  }
+
+  .ul {
+    display: ${isMenuOpen ? 'flex' : 'none'}; /* Muestra u oculta la lista en dispositivos móviles */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    z-index: 999;
+  }
+
   .li {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav.open .ul {
+    display: none;
+    transition: all 2s;
+  }
+}
+@media (max-width: 600px) {
+  .ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .li {
+    float: none;
     display: block;
     width: 100%;
     text-align: center;
+    padding: 8px 0; /* Ajusta el espacio entre elementos */
   }
 
   body {
